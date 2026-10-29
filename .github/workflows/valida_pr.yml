@@ -1,7 +1,7 @@
 name: Validação de PR - CI
-  on:
-    pull_request:
-      branches: [ "develop", "master" ]
+on:
+  pull_request:
+    branches: [ "develop", "master" ]
 jobs:
   testes:
     runs-on: ubuntu-latest
