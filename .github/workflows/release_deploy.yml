@@ -16,3 +16,13 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v1.0.0
+        name: Release v1.0.0 - Versão Oficial
+        body: |
+          Nova versão publicada com sucesso via pipeline CI/CD no GitHub Pages!
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy no GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
